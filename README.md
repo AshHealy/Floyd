@@ -1,2 +1,2 @@
 
-![Alt Text](.src/sprites/floyd.gif)
+![Alt Text](floyd.gif)
