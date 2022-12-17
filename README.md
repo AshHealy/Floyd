@@ -1,9 +1,8 @@
-<div align="center">
+
+<p align="center">
 ![This is moving](/src/images/floyd.gif)
-</div>
-
 This is Floyd, as you can see he is a duck with a quirky personality. 
-
+</p>
 
 ## To-Do List
 To Do List
