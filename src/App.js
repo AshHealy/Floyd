@@ -108,7 +108,7 @@ const Floyd = () => {
         <h2>Floyd is dead...</h2>
         
       )}
-      <button onClick={Floyd}>Restart</button>
+      <button onClick={isAlive}>Restart</button>
     </div>
   );
 };
