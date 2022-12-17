@@ -8,21 +8,27 @@ This is Floyd, as you can see he is a duck with a quirky personality.
 </p>
 
 ## To-Do List
-To Do List
-- [ ] Implement Floyds Room
-- [ ] Prevent Sleep-playing
+To Do
 - [ ] Implement Game Start Screen
 - [ ] Add currency system
 - [ ] Add shops
-- [ ] Read database of items Floyd can buy
-- [ ] Update how long users Floyd has been alive
+- [ ] Read| database of items Floyd can buy
+- [ ] Update| Save how long users Floyd has been alive
 
 
+Doing
+- [ ] Adjust sizes of dead and alive sprites
+- [ ] Implement Floyds Room
+- [ ] Prevent Sleep-playing
 
-Mvp
+
+Done
 - [X] Style Buttons
 - [X] Style Game Container
 - [X] Add floyd alive and floyd dead images
+
+
+Mvp
 - [X] floyd must be able to eat and get hungry 
 - [X] floyd must be able to excercise 
 - [X] floyd must poop 
@@ -30,15 +36,15 @@ Mvp
 - [X] floyd must have a happiness level
 - [X] floyd must have a health level
 - [X] floyd must have a poop level
-- [X] Create a new Floyd
-- [X] Delete (kill) Floyd
-- [X] floyd 1 mini-game that raises his happiness
+- [X] Create| a new Floyd
+- [X] Delete| (kill) Floyd
 
 Extensions
-- [ ] floyd must have at least 2 idle animations 
-- [ ] Add floyd egg
+- [ ] Floyd 1 mini-game that raises his happiness
+- [X] Floyd must have at least 2 animations 
+- [ ] Add Floyd egg
 - [ ] Add various hats for floyd to wear
-- [ ] floyd can have a collection of 5 hats
+- [ ] Floyd can have a collection of 5 hats
 - [ ] React Native?
 - [ ] Floyd randomly leaves to go on adventures
 - [ ] Floyd's Father Easter Egg
