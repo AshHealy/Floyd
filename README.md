@@ -1,5 +1,10 @@
 
-->![This is moving](/src/images/floyd.gif)<-
+[This is moving](/src/images/floyd.gif)
+
+
+<div style="text-align:center;">
+  <img src="/src/images/floyd.gif" alt="This is moving" />
+</div>
 
 <p align="center">
 This is Floyd, as you can see he is a duck with a quirky personality. 
