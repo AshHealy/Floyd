@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import alive from './images/floyd-alive.png';
+import dead from './images/floyd-dead.png';
 
 
 // import duck from './src/images/floyd.png';
@@ -14,7 +16,7 @@ const Floyd = () => {
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 // not sure how to target this in CSS
-  const [imageSource, setImageSource] = useState('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Green_tick.svg/1200px-Green_tick.svg.png');
+  const [imageSource, setImageSource] = useState(alive);
 
 // checks if floyd is alive and starts a timer, timer stops when floyd dies
   useEffect(() => {
@@ -26,7 +28,7 @@ const Floyd = () => {
         setMood(mood - 1);
         if (mood <= 0 || health <= 0 || age > 100) {
           setIsAlive(false);
-          setImageSource('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Green_tick.svg/1200px-Green_tick.svg.png');
+          setImageSource(dead);
         }
         
       }
@@ -75,7 +77,7 @@ const Floyd = () => {
 //Debugging tool for killing floyd
   const killFloyd = () => {
     setIsAlive(false);
-    setImageSource('https://cdn-djeki.nitrocdn.com/vLUugKtJLMkeqMsJmnxZRvWarndHoWqe/assets/static/optimized/rev-8658953/wp-content/uploads/2019/04/red-x-on-network-icon.png');
+    setImageSource(dead);
   };
 
 
