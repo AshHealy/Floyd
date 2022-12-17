@@ -1,5 +1,5 @@
 
-![This is moving](/Users/codeclanstudent/Desktop/Floyd/AI_Vpet/v-pet/src/images/floyd.gif)
+![This is moving](/src/images/floyd.gif)
 
 This is Floyd, as you can see he is a duck with a quirky personality. 
 
