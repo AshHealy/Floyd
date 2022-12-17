@@ -77,6 +77,7 @@ const Floyd = () => {
     setImageSource('https://cdn-djeki.nitrocdn.com/vLUugKtJLMkeqMsJmnxZRvWarndHoWqe/assets/static/optimized/rev-8658953/wp-content/uploads/2019/04/red-x-on-network-icon.png');
   };
 
+
 //this renders everything in the browser
 //think it's here that I'm having issues with rendering floyd image?
   return (
@@ -101,10 +102,13 @@ const Floyd = () => {
           )}
           <button onClick={clearPoop}>Clear Poop</button>
           <button onClick={killFloyd}>Kill Floyd</button>
+          
         </>
       ) : (
         <h2>Floyd is dead...</h2>
+        
       )}
+      <button onClick={Floyd}>Restart</button>
     </div>
   );
 };
