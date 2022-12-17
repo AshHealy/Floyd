@@ -20,7 +20,6 @@ Mvp
 - [X] Add floyd alive and floyd dead images
 - [X] floyd must be able to eat and get hungry 
 - [X] floyd must be able to excercise 
-- [ ] floyd must have at least 2 idle animations 
 - [X] floyd must poop 
 - [X] floyd must have a hunger level 
 - [X] floyd must have a happiness level
@@ -28,6 +27,7 @@ Mvp
 - [X] floyd must have a poop level
 
 Extensions
+- [ ] floyd must have at least 2 idle animations 
 - [ ] Add floyd egg
 - [ ] Add shops
 - [ ] Add currency system
@@ -45,3 +45,8 @@ Extensions
 - Create a Button that starts the timer :I 
 - The buttons should have been Styled Components
 - Logic is chaotic and will bite you in the ass no matter what
+
+## Notes and Questions To Ask Ben & Steve
+
+- Can I refactor my App so that everthing is easier to style
+- How can I save the game? Should I be able to save the game?
