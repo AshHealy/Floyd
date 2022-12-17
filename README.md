@@ -1,7 +1,4 @@
 
-[This is moving](/src/images/floyd.gif)
-
-
 <div style="text-align:center;">
   <img src="/src/images/floyd.gif" alt="This is moving" />
 </div>
