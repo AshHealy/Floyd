@@ -28,6 +28,7 @@ const Floyd = () => {
           setIsAlive(false);
           setImageSource('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Green_tick.svg/1200px-Green_tick.svg.png');
         }
+        
       }
     }, 1000);
     return () => {
