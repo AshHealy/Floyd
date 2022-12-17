@@ -9,6 +9,7 @@ const Floyd = () => {
   const [burger, setBurger] = useState(0);
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [imageSource, setImageSource] = useState('floyd-alive.png');
 
   useEffect(() => {
     let timer = setInterval(() => {
@@ -19,6 +20,7 @@ const Floyd = () => {
         setMood(mood - 1);
         if (mood <= 0 || health <= 0 || age > 100) {
           setIsAlive(false);
+          setImageSource('floyd-alive.png');
         }
       }
     }, 1000);
@@ -62,6 +64,7 @@ const Floyd = () => {
 
   const killFloyd = () => {
     setIsAlive(false);
+    setImageSource('floyd-dead.png');
   };
 
   return (
@@ -70,6 +73,7 @@ const Floyd = () => {
       <h2>
         Age: {age} | Health: {health} | Mood: {mood} | Poop: {poop} | Burger: {burger}
       </h2>
+      <img src={imageSource} alt="Floyd" />
       {isAlive ? (
         <>
           <button onClick={feedBurger}>Feed Burger</button>
