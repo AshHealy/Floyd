@@ -25,3 +25,5 @@ stopButton.addEventListener("click", () => {
     timer = null;
   }
 });
+
+//idek what this is

@@ -6,6 +6,7 @@ This is Floyd, as you can see he is a duck with a quirky personality.
 
 ## To-Do List
 - [ ] Add floyd alive and floyd dead images
+- [ ] Style Buttons
 - [ ] Add floyd egg
 - [ ] Add shops
 - [ ] Add currency system
@@ -16,3 +17,4 @@ This is Floyd, as you can see he is a duck with a quirky personality.
 - Create the timer & Kill Buttons First
 - Then Implement Behaviours
 - Create a Button that starts the timer :I 
+- The buttons should have been Styled Components

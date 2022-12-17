@@ -84,29 +84,28 @@ const Floyd = () => {
 //this renders everything in the browser
 //think it's here that I'm having issues with rendering floyd image?
   return (
-    <div>
+    <div class='GameContainer'>
       <h1>Floyd</h1>
       <h2>
         Age: {age} | Health: {health} | Mood: {mood} | Poop: {poop} | Burger: {burger}
       </h2>
       <img src={imageSource} alt="Floyd" />
       {isAlive ? (
-        <>
-          <button onClick={feedBurger}>Feed Burger</button>
+        <div class="ButtonContainer">
+            <button className="feed-burger" onClick={feedBurger}>Feed Burger</button>
           {isSleeping ? (
-            <button onClick={wakeUp}>Wake Up</button>
+            <button className="wake-up" onClick={wakeUp}>Wake Up</button>
           ) : (
-            <button onClick={putToSleep}>Go To Sleep</button>
+            <button className="sleep" onClick={putToSleep}>Go To Sleep</button>
           )}
           {isPlaying ? (
-            <button onClick={stopPlaying}>Stop Playing</button>
+            <button className="stop-playing" onClick={stopPlaying}>Stop Playing</button>
           ) : (
-            <button onClick={play}>Play</button>
+            <button className="play" onClick={play}>Play</button>
           )}
-          <button onClick={clearPoop}>Clear Poop</button>
-          <button onClick={killFloyd}>Kill Floyd</button>
-          
-        </>
+          <button className="clear-poop" onClick={clearPoop}>Clear Poop</button>
+          <button className="kill-floyd" onClick={killFloyd}>Kill Floyd</button>
+        </div>
       ) : (
         <h2>Floyd is dead...</h2>
         
