@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+
+// import duck from './src/images/floyd.png';
+
 //this sets up Floyd
 const Floyd = () => {
   const [age, setAge] = useState(0);
@@ -10,7 +13,7 @@ const Floyd = () => {
   const [burger, setBurger] = useState(0);
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [imageSource, setImageSource] = useState('/src/floyd-alive.png');
+  const [imageSource, setImageSource] = useState('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Green_tick.svg/1200px-Green_tick.svg.png');
 
 // checks if floyd is alive and starts a timer, timer stops when floyd dies
   useEffect(() => {
@@ -22,7 +25,7 @@ const Floyd = () => {
         setMood(mood - 1);
         if (mood <= 0 || health <= 0 || age > 100) {
           setIsAlive(false);
-          setImageSource('floyd-alive.png');
+          setImageSource('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Green_tick.svg/1200px-Green_tick.svg.png');
         }
       }
     }, 1000);
@@ -70,7 +73,7 @@ const Floyd = () => {
 //Debugging tool for killing floyd
   const killFloyd = () => {
     setIsAlive(false);
-    setImageSource('/src/floyd-dead.png');
+    setImageSource('https://cdn-djeki.nitrocdn.com/vLUugKtJLMkeqMsJmnxZRvWarndHoWqe/assets/static/optimized/rev-8658953/wp-content/uploads/2019/04/red-x-on-network-icon.png');
   };
 
 //this renders everything in the browser
@@ -104,5 +107,6 @@ const Floyd = () => {
     </div>
   );
 };
+
 
 export default Floyd;
