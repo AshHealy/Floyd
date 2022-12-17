@@ -1,6 +1,6 @@
-<p align="center">
+<div align="center">
 ![This is moving](/src/images/floyd.gif)
-</p>
+</div>
 
 This is Floyd, as you can see he is a duck with a quirky personality. 
 
