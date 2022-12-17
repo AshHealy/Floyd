@@ -25,6 +25,10 @@ Mvp
 - [X] floyd must have a happiness level
 - [X] floyd must have a health level
 - [X] floyd must have a poop level
+- [X] Create a new Floyd
+- [ ] Read longest living Floyd?
+- [ ] Update how long users Floyd has been alive
+- [X] Delete (kill) Floyd
 
 Extensions
 - [ ] floyd must have at least 2 idle animations 
