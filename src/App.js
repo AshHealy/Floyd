@@ -48,6 +48,10 @@ const Floyd = () => {
     setMood(mood - 10);
   };
 
+  const clearPoop = () => {
+    setPoop(0);
+  };
+
   return (
     <div>
       <h1>Floyd</h1>
@@ -67,6 +71,7 @@ const Floyd = () => {
           ) : (
             <button onClick={play}>Play</button>
           )}
+          <button onClick={clearPoop}>Clear Poop</button>
         </>
       ) : (
         <h2>Floyd is dead...</h2>
