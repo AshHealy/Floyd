@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import alive from './images/floyd-alive.png';
 import dead from './images/floyd-dead.png';
+import food from './images/feed.png';
+import jobby from './images/poop.png'
 
 
 // import duck from './src/images/floyd.png';
@@ -84,14 +86,14 @@ const Floyd = () => {
 //this renders everything in the browser
 //think it's here that I'm having issues with rendering floyd image?
   return (
-    <div class='GameContainer'>
+    <div className='GameContainer'>
       <h1>Floyd</h1>
       <h2>
-        Age: {age} | Health: {health} | Mood: {mood} | Poop: {poop} | Burger: {burger}
+        Age: {age} | Health: {health} | Mood: {mood} | <img src={jobby} alt="borgor" /> {poop} | <img src={food} alt="borgor" /> {burger} 
       </h2>
       <img src={imageSource} alt="Floyd" />
       {isAlive ? (
-        <div class="ButtonContainer">
+        <div className="ButtonContainer">
             <button className="feed-burger" onClick={feedBurger}>Feed Burger</button>
           {isSleeping ? (
             <button className="wake-up" onClick={wakeUp}>Wake Up</button>
@@ -104,13 +106,13 @@ const Floyd = () => {
             <button className="play" onClick={play}>Play</button>
           )}
           <button className="clear-poop" onClick={clearPoop}>Clear Poop</button>
-          <button className="kill-floyd" onClick={killFloyd}>Kill Floyd</button>
+          <button className="kill-floyd" onClick={killFloyd}>Do Not Press</button>
         </div>
       ) : (
         <h2>Floyd is dead...</h2>
         
       )}
-      <button onClick={() => window.location.reload()}>Restart</button>
+      <button className="restart" onClick={() => window.location.reload()}>Restart!</button>
     </div>
   );
 };

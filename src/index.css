@@ -22,8 +22,42 @@ img {
   margin-right: auto;
 }
 
-.ButtonContainer feed-burger{
-  background-image: url('./images/feed.png');
+.ButtonContainer {
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.feed-burger, 
+.wake-up, 
+.sleep, 
+.stop-playing, 
+.play, 
+.clear-poop {
+  background: #f9d71c;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
 
+.kill-floyd{
+  background: #9b0909;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.restart{
+  background: #9b0909;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
