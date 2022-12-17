@@ -1,6 +1,7 @@
 
+-> ![This is moving](/src/images/floyd.gif) <-
+
 <p align="center">
-![This is moving](/src/images/floyd.gif)
 This is Floyd, as you can see he is a duck with a quirky personality. 
 </p>
 
