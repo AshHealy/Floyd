@@ -10,3 +10,8 @@ This is Floyd, as you can see he is a duck with a quirky personality.
 - [ ] Add shops
 - [ ] Add currency system
 - [ ] Add various hats for floyd to wear
+
+## What Have I Learned So Far
+
+- Create the timer & Kill Buttons First
+- Then Implement Behaviours
