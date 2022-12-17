@@ -109,7 +109,7 @@ const Floyd = () => {
         <h2>Floyd is dead...</h2>
         
       )}
-      <button onClick={isAlive}>Restart</button>
+      <button onClick={() => window.location.reload()}>Restart</button>
     </div>
   );
 };
