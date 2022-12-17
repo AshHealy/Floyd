@@ -12,16 +12,22 @@ const Floyd = () => {
 
   useEffect(() => {
     let timer = setInterval(() => {
-      setAge(age + 1);
-      setPoop(poop + 1);
-      setHealth(health - 1);
-      setMood(mood - 1);
-      if (mood <= 0 || health <= 0 || age > 100) {
-        setIsAlive(false);
+      if (isAlive) {
+        setAge(age + 1);
+        setPoop(poop + 1);
+        setHealth(health - 1);
+        setMood(mood - 1);
+        if (mood <= 0 || health <= 0 || age > 100) {
+          setIsAlive(false);
+        }
       }
     }, 1000);
-    return () => clearInterval(timer);
-  }, [age, poop, health, mood]);
+    return () => {
+      if (isAlive) {
+        clearInterval(timer);
+      }
+    }
+  }, [age, poop, health, mood, isAlive]);
 
   const feedBurger = () => {
     setBurger(burger + 1);
@@ -54,6 +60,10 @@ const Floyd = () => {
     setPoop(0);
   };
 
+  const killFloyd = () => {
+    setIsAlive(false);
+  };
+
   return (
     <div>
       <h1>Floyd</h1>
@@ -74,6 +84,7 @@ const Floyd = () => {
             <button onClick={play}>Play</button>
           )}
           <button onClick={clearPoop}>Clear Poop</button>
+          <button onClick={killFloyd}>Kill Floyd</button>
         </>
       ) : (
         <h2>Floyd is dead...</h2>
