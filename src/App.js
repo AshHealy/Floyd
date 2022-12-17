@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+//this sets up Floyd
 const Floyd = () => {
   const [age, setAge] = useState(0);
   const [poop, setPoop] = useState(0);
@@ -9,8 +10,9 @@ const Floyd = () => {
   const [burger, setBurger] = useState(0);
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [imageSource, setImageSource] = useState('floyd-alive.png');
+  const [imageSource, setImageSource] = useState('./src/floyd-alive.pngg');
 
+// checks if floyd is alive and starts a timer, timer stops when floyd dies
   useEffect(() => {
     let timer = setInterval(() => {
       if (isAlive) {
@@ -31,6 +33,7 @@ const Floyd = () => {
     }
   }, [age, poop, health, mood, isAlive]);
 
+  //feeds floyd one burger
   const feedBurger = () => {
     setBurger(burger + 1);
     setPoop(poop + 1);
@@ -38,14 +41,16 @@ const Floyd = () => {
     setMood(mood + 5);
   };
 
+  //floyd sleeps and restores 10 health
+  //need to fix so that when floyd is sleeping he can't also be playing
   const putToSleep = () => {
     setIsSleeping(true);
     setHealth(health + 10);
   };
-
+//wakes floyd up
   const wakeUp = () => {
     setIsSleeping(false);
-    setHealth(health - 10);
+    // setHealth(health - 10);
   };
 
   const play = () => {
@@ -55,18 +60,21 @@ const Floyd = () => {
 
   const stopPlaying = () => {
     setIsPlaying(false);
-    setMood(mood - 10);
+    // setMood(mood - 10);
   };
 
+//cleans poop
   const clearPoop = () => {
     setPoop(0);
   };
-
+//Debugging tool for killing floyd
   const killFloyd = () => {
     setIsAlive(false);
     setImageSource('floyd-dead.png');
   };
 
+//this renders everything in the browser
+//think it's here that I'm having issues with rendering floyd image?
   return (
     <div>
       <h1>Floyd</h1>
