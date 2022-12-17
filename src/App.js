@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import alive from './images/floyd-alive.png';
-import dead from './images/floyd-dead.png';
+import alive from './images/floyd-alive.gif';
+import dead from './images/floyd-dead.gif';
 import food from './images/feed.png';
 import jobby from './images/poop.png'
 

@@ -12,6 +12,11 @@ To Do List
 - [ ] Implement Floyds Room
 - [ ] Prevent Sleep-playing
 - [ ] Implement Game Start Screen
+- [ ] Add currency system
+- [ ] Add shops
+- [ ] Read database of items Floyd can buy
+- [ ] Update how long users Floyd has been alive
+
 
 
 Mvp
@@ -26,19 +31,17 @@ Mvp
 - [X] floyd must have a health level
 - [X] floyd must have a poop level
 - [X] Create a new Floyd
-- [ ] Read longest living Floyd?
-- [ ] Update how long users Floyd has been alive
 - [X] Delete (kill) Floyd
+- [X] floyd 1 mini-game that raises his happiness
 
 Extensions
 - [ ] floyd must have at least 2 idle animations 
 - [ ] Add floyd egg
-- [ ] Add shops
-- [ ] Add currency system
 - [ ] Add various hats for floyd to wear
 - [ ] floyd can have a collection of 5 hats
-- [ ] floyd must have 1 mini-game that raises his happiness
 - [ ] React Native?
+- [ ] Floyd randomly leaves to go on adventures
+- [ ] Floyd's Father Easter Egg
 - [ ] Pink Floyd Easter Egg
 
 
