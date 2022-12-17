@@ -25,6 +25,7 @@ img {
 .ButtonContainer {
   display: flex;
   justify-content: space-evenly;
+  padding: 5rem;
 }
 
 .feed-burger, 
@@ -33,7 +34,7 @@ img {
 .stop-playing, 
 .play, 
 .clear-poop {
-  background: #f9d71c;
+  background: #939fa8;
   color: #fff;
   font-size: 1rem;
   padding: 0.5rem;
@@ -60,4 +61,14 @@ img {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+
+.GameContainer {
+  background: #deecf2;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

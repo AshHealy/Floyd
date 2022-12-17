@@ -11,6 +11,9 @@ This is Floyd, as you can see he is a duck with a quirky personality.
 To Do List
 - [ ] Style Buttons
 - [ ] Style Game Container
+- [ ] Implement Floyds Room
+- [ ] Prevent Sleep-playing
+
 
 Mvp
 - [X] Add floyd alive and floyd dead images
@@ -31,6 +34,7 @@ Extensions
 - [ ] floyd can have a collection of 5 hats
 - [ ] floyd must have 1 mini-game that raises his happiness
 - [ ] React Native?
+- [ ] Pink Floyd Easter Egg
 
 
 ## What Have I Learned So Far
@@ -39,3 +43,4 @@ Extensions
 - Then Implement Behaviours
 - Create a Button that starts the timer :I 
 - The buttons should have been Styled Components
+- Logic is chaotic and will bite you in the ass no matter what

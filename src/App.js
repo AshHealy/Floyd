@@ -25,7 +25,7 @@ const Floyd = () => {
     let timer = setInterval(() => {
       if (isAlive) {
         setAge(age + 1);
-        setPoop(poop + 1);
+        // setPoop(poop + 1);
         setHealth(health - 1);
         setMood(mood - 1);
         if (mood <= 0 || health <= 0 || age > 100) {
@@ -55,6 +55,13 @@ const Floyd = () => {
   const putToSleep = () => {
     setIsSleeping(true);
     setHealth(health + 10);
+    if (isPlaying) {  // I added this to try and stop sleep playing
+      stopPlaying();
+    } else if (isSleeping) {
+      wakeUp();
+    } else {
+      play();
+    }
   };
 //wakes floyd up
   const wakeUp = () => {
@@ -62,9 +69,17 @@ const Floyd = () => {
     // setHealth(health - 10);
   };
 
+
   const play = () => {
     setIsPlaying(true);
     setMood(mood + 10);
+    if (isSleeping) {   // I added this to try and stop sleep playing
+      wakeUp() ;
+    } else if (isPlaying) {
+      stopPlaying() ;
+    } else {
+      play();
+    }
   };
 
   const stopPlaying = () => {
@@ -89,7 +104,11 @@ const Floyd = () => {
     <div className='GameContainer'>
       <h1>Floyd</h1>
       <h2>
-        Age: {age} | Health: {health} | Mood: {mood} | <img src={jobby} alt="borgor" /> {poop} | <img src={food} alt="borgor" /> {burger} 
+        Age: {age} | 
+        Health: {health} | 
+        Mood: {mood} | 
+        <img src={jobby} alt="borgor"/> {poop} | 
+        <img src={food} alt="borgor" /> {burger} 
       </h2>
       <img src={imageSource} alt="Floyd" />
       {isAlive ? (
@@ -106,12 +125,13 @@ const Floyd = () => {
             <button className="play" onClick={play}>Play</button>
           )}
           <button className="clear-poop" onClick={clearPoop}>Clear Poop</button>
-          <button className="kill-floyd" onClick={killFloyd}>Do Not Press</button>
+          
         </div>
       ) : (
         <h2>Floyd is dead...</h2>
         
       )}
+      <button className="kill-floyd" onClick={killFloyd}>Do Not Press</button>
       <button className="restart" onClick={() => window.location.reload()}>Restart!</button>
     </div>
   );
