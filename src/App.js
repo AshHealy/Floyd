@@ -13,6 +13,7 @@ const Floyd = () => {
   const [burger, setBurger] = useState(0);
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+// not sure how to target this in CSS
   const [imageSource, setImageSource] = useState('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Green_tick.svg/1200px-Green_tick.svg.png');
 
 // checks if floyd is alive and starts a timer, timer stops when floyd dies
