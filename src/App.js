@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Floyd = () => {
+  const [age, setAge] = useState(0);
   const [poop, setPoop] = useState(0);
   const [health, setHealth] = useState(100);
   const [mood, setMood] = useState(100);
@@ -11,15 +12,16 @@ const Floyd = () => {
 
   useEffect(() => {
     let timer = setInterval(() => {
+      setAge(age + 1);
       setPoop(poop + 1);
       setHealth(health - 1);
       setMood(mood - 1);
-      if (mood <= 0 || health <= 0) {
+      if (mood <= 0 || health <= 0 || age > 100) {
         setIsAlive(false);
       }
     }, 1000);
     return () => clearInterval(timer);
-  }, [poop, health, mood]);
+  }, [age, poop, health, mood]);
 
   const feedBurger = () => {
     setBurger(burger + 1);
@@ -56,7 +58,7 @@ const Floyd = () => {
     <div>
       <h1>Floyd</h1>
       <h2>
-        Health: {health} | Mood: {mood} | Poop: {poop} | Burger: {burger}
+        Age: {age} | Health: {health} | Mood: {mood} | Poop: {poop} | Burger: {burger}
       </h2>
       {isAlive ? (
         <>
