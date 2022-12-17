@@ -9,13 +9,14 @@ This is Floyd, as you can see he is a duck with a quirky personality.
 
 ## To-Do List
 To Do List
-- [ ] Style Buttons
-- [ ] Style Game Container
 - [ ] Implement Floyds Room
 - [ ] Prevent Sleep-playing
+- [ ] Implement Game Start Screen
 
 
 Mvp
+- [X] Style Buttons
+- [X] Style Game Container
 - [X] Add floyd alive and floyd dead images
 - [X] floyd must be able to eat and get hungry 
 - [X] floyd must be able to excercise 
