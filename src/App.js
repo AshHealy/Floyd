@@ -10,7 +10,7 @@ const Floyd = () => {
   const [burger, setBurger] = useState(0);
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [imageSource, setImageSource] = useState('./src/floyd-alive.pngg');
+  const [imageSource, setImageSource] = useState('/src/floyd-alive.png');
 
 // checks if floyd is alive and starts a timer, timer stops when floyd dies
   useEffect(() => {
@@ -70,7 +70,7 @@ const Floyd = () => {
 //Debugging tool for killing floyd
   const killFloyd = () => {
     setIsAlive(false);
-    setImageSource('floyd-dead.png');
+    setImageSource('/src/floyd-dead.png');
   };
 
 //this renders everything in the browser
