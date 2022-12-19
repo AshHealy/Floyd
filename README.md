@@ -63,3 +63,5 @@ Extensions
 
 - Can I refactor my App so that everthing is easier to style
 - How can I save the game? Should I be able to save the game?
+
+I've got a currency system that I want to implement. I think I want to build the shop using JSON objects.
