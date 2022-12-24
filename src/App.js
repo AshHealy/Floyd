@@ -5,6 +5,7 @@ import food from './images/feed.png';
 import jobby from './images/poop.png'
 
 
+
 // import duck from './src/images/floyd.png';
 
 //this sets up Floyd
@@ -19,6 +20,9 @@ const Floyd = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 // not sure how to target this in CSS
   const [imageSource, setImageSource] = useState(alive);
+ // fookin bills 
+  let duckBills = 10;
+//______________________________________________________
 
 // checks if floyd is alive and starts a timer, timer stops when floyd dies
   useEffect(() => {
@@ -41,7 +45,7 @@ const Floyd = () => {
       }
     }
   }, [age, poop, health, mood, isAlive]);
-
+//______________________________________________________
   //feeds floyd one burger
   const feedBurger = () => {
     setBurger(burger + 1);
@@ -49,7 +53,7 @@ const Floyd = () => {
     setHealth(health + 5);
     setMood(mood + 5);
   };
-
+//______________________________________________________
   //floyd sleeps and restores 10 health
   //need to fix so that when floyd is sleeping he can't also be playing
   const putToSleep = () => {
@@ -86,17 +90,33 @@ const Floyd = () => {
     setIsPlaying(false);
     // setMood(mood - 10);
   };
-
+//______________________________________________________
 //cleans poop
   const clearPoop = () => {
     setPoop(0);
   };
+//______________________________________________________  
 //Debugging tool for killing floyd
   const killFloyd = () => {
     setIsAlive(false);
     setImageSource(dead);
   };
+//______________________________________________________
+      //Function to add duck bills to the character's account
+    const addDuckBills = (amount) => {
+      duckBills += amount;
+    }
 
+    //Function to subtract duck bills from the character's account
+    const subtractDuckBills = (amount) => {
+      duckBills -= amount;
+    }
+
+    //Function to show how much money is in the character's account
+    const showDuckBills = () => {
+      console.log(`You have ${duckBills} Duck Bills.`);
+    }
+//______________________________________________________
 
 //this renders everything in the browser
 //think it's here that I'm having issues with rendering floyd image?
@@ -125,15 +145,27 @@ const Floyd = () => {
             <button className="play" onClick={play}>Play</button>
           )}
           <button className="clear-poop" onClick={clearPoop}>Clear Poop</button>
+
+          <div className='WalletContainer'>
+          <h2>Duck Bills</h2>
+          <p> {showDuckBills}</p>
+          <p>You have {duckBills} Duck Bills.</p>
+          <button onClick={() => addDuckBills(10)}>Add 10 Duck Bills</button>
+          <button onClick={() => subtractDuckBills(10)}>Subtract 10 Duck Bills</button>
+          </div>
           
         </div>
       ) : (
         <h2>Floyd is dead...</h2>
         
       )}
+      <div className='devTools'>
       <button className="kill-floyd" onClick={killFloyd}>Do Not Press</button>
       <button className="restart" onClick={() => window.location.reload()}>Restart!</button>
+      </div>
     </div>
+
+
   );
 };
 
