@@ -19,7 +19,8 @@ To Do
 Doing
 - [ ] Adjust sizes of dead and alive sprites
 - [ ] Implement Floyds Room
-- [ ] Prevent Sleep-playing
+- [ ] Prevent Sleep-playing <!-- kind of got this working? --> 
+
 
 
 Done
@@ -37,7 +38,10 @@ Mvp
 - [X] floyd must have a health level
 - [X] floyd must have a poop level
 - [X] Create| a new Floyd
+- [ ] Read| database of items Floyd can buy
+- [ ] Update| Save how long users Floyd has been alive
 - [X] Delete| (kill) Floyd
+
 
 Extensions
 - [ ] Floyd 1 mini-game that raises his happiness

@@ -18,7 +18,6 @@ const Floyd = () => {
   const [burger, setBurger] = useState(0);
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-// not sure how to target this in CSS
   const [imageSource, setImageSource] = useState(alive);
  // fookin bills 
   let duckBills = 10;
@@ -47,6 +46,7 @@ const Floyd = () => {
   }, [age, poop, health, mood, isAlive]);
 //______________________________________________________
   //feeds floyd one burger
+  // I should set a delay before adding poop
   const feedBurger = () => {
     setBurger(burger + 1);
     setPoop(poop + 1);
@@ -103,9 +103,10 @@ const Floyd = () => {
   };
 //______________________________________________________
       //Function to add duck bills to the character's account
-    const addDuckBills = (amount) => {
-      duckBills += amount;
-    }
+      //I think the problem is amount? 
+      const addDuckBills = () => {
+        duckBills += 10;
+      }
 
     //Function to subtract duck bills from the character's account
     const subtractDuckBills = (amount) => {
@@ -113,8 +114,9 @@ const Floyd = () => {
     }
 
     //Function to show how much money is in the character's account
+    //I should change this to an alert box maybe
     const showDuckBills = () => {
-      console.log(`You have ${duckBills} Duck Bills.`);
+      alert(`You have ${duckBills} Duck Bills.`);
     }
 //______________________________________________________
 
