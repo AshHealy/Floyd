@@ -1,22 +1,24 @@
-const CurrencyCounter = (() => {
-    let total = 0;
-  
-    const addCurrency = (amount) => {
-      total += amount;
-    };
-  
-    const getTotal = () => total;
-  
-    const reset = () => {
-      total = 0;
-    };
-  
-    return {
-      addCurrency,
-      getTotal,
-      reset
-    }
-  
-  })();
-  
-  export default CurrencyCounter;
+//This is how chatGPT suggests implementing currency
+
+import { useState } from 'react';
+
+const CurrencySystem = () => {
+  const [currency, setCurrency] = useState(0);
+
+  const earnDuckBills = (amount) => {
+    setCurrency(currency + amount);
+  }
+
+  const spendDuckBills = (amount) => {
+    setCurrency(currency - amount);
+  }
+
+  return (
+    <div>
+      <h1>Currency: {currency}</h1>
+      {/* other components and elements go here */}
+    </div>
+  );
+}
+
+export default CurrencySystem;

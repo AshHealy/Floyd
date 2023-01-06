@@ -3,6 +3,7 @@ import alive from './images/floyd-alive.gif';
 import dead from './images/floyd-dead.gif';
 import food from './images/feed.png';
 import jobby from './images/poop.png'
+import CurrencySystem from './currency';
 
 
 
