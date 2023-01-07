@@ -3,7 +3,6 @@ import alive from './images/floyd-alive.gif';
 import dead from './images/floyd-dead.gif';
 import food from './images/feed.png';
 import jobby from './images/poop.png'
-import CurrencySystem from './currency';
 
 
 
@@ -21,7 +20,8 @@ const Floyd = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [imageSource, setImageSource] = useState(alive);
  // fookin bills 
-  let duckBills = 10;
+ const [currency, setCurrency] = useState(0);
+
 //______________________________________________________
 
 // checks if floyd is alive and starts a timer, timer stops when floyd dies
@@ -103,22 +103,13 @@ const Floyd = () => {
     setImageSource(dead);
   };
 //______________________________________________________
-      //Function to add duck bills to the character's account
-      //I think the problem is amount? 
-      const addDuckBills = () => {
-        duckBills += 10;
-      }
+  const earnDuckBills = (amount) => {
+    setCurrency(currency + amount);
+  }
 
-    //Function to subtract duck bills from the character's account
-    const subtractDuckBills = (amount) => {
-      duckBills -= amount;
-    }
-
-    //Function to show how much money is in the character's account
-    //I should change this to an alert box maybe
-    const showDuckBills = () => {
-      alert(`You have ${duckBills} Duck Bills.`);
-    }
+  const spendDuckBills = (amount) => {
+    setCurrency(currency - amount);
+  }
 //______________________________________________________
 
 //this renders everything in the browser
@@ -151,10 +142,9 @@ const Floyd = () => {
 
           <div className='WalletContainer'>
           <h2>Duck Bills</h2>
-          <p> {showDuckBills}</p>
-          <p>You have {duckBills} Duck Bills.</p>
-          <button onClick={() => addDuckBills(10)}>Add 10 Duck Bills</button>
-          <button onClick={() => subtractDuckBills(10)}>Subtract 10 Duck Bills</button>
+          <p>You have {currency} Duck Bills.</p>
+          <button onClick={() => earnDuckBills(10)}>Add 10 Duck Bills</button>
+          <button onClick={() => spendDuckBills(10)}>Subtract 10 Duck Bills</button>
           </div>
           
         </div>
