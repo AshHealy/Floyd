@@ -11,11 +11,6 @@ body {
   text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 img {
   display: block;
   margin-left: auto;
@@ -66,6 +61,33 @@ img {
   cursor: pointer;
 }
 
+.earn{
+  background: #13c71c;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.spend{
+  background: #9b0909;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.earn,
+.spend
+{
+  height: 30%;
+  width: 30%;
+}
+
 .GameContainer {
   background: #deecf2;
   height: 500px;
@@ -78,9 +100,8 @@ img {
 
 .WalletContainer { 
   background: #deecf2;
-  display: flex;
-
 }
+
 
 .devTools{
   display: flex;

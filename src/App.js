@@ -19,8 +19,7 @@ const Floyd = () => {
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [imageSource, setImageSource] = useState(alive);
- // fookin bills 
- const [currency, setCurrency] = useState(0);
+  const [currency, setCurrency] = useState(0);
 
 //______________________________________________________
 
@@ -103,6 +102,7 @@ const Floyd = () => {
     setImageSource(dead);
   };
 //______________________________________________________
+//Adds and subtracts from duckbills
   const earnDuckBills = (amount) => {
     setCurrency(currency + amount);
   }
@@ -143,8 +143,8 @@ const Floyd = () => {
           <div className='WalletContainer'>
           <h2>Duck Bills</h2>
           <p>You have {currency} Duck Bills.</p>
-          <button onClick={() => earnDuckBills(10)}>Add 10 Duck Bills</button>
-          <button onClick={() => spendDuckBills(10)}>Subtract 10 Duck Bills</button>
+          <button className='earn' onClick={() => earnDuckBills(10)}> + </button>
+          <button className='spend' onClick={() => spendDuckBills(10)}> - </button>
           </div>
           
         </div>

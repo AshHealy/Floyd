@@ -10,10 +10,10 @@ This is Floyd, as you can see he is a duck with a quirky personality.
 ## To-Do List
 To Do
 - [ ] Implement Game Start Screen
-- [ ] Add currency system
 - [ ] Add shops
 - [ ] Read| database of items Floyd can buy
-- [ ] Update| Save how long users Floyd has been alive
+- [ ] Update| Save Floyd's inventory & stats
+- [ ] Style wallet Container
 
 
 Doing
@@ -27,6 +27,7 @@ Done
 - [X] Style Buttons
 - [X] Style Game Container
 - [X] Add floyd alive and floyd dead images
+- [X] Add currency system
 
 
 Mvp
@@ -39,7 +40,7 @@ Mvp
 - [X] floyd must have a poop level
 - [X] Create| a new Floyd
 - [ ] Read| database of items Floyd can buy
-- [ ] Update| Save how long users Floyd has been alive
+- [ ] Update| Save Floyd's inventory & stats
 - [X] Delete| (kill) Floyd
 
 
