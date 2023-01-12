@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Floyd } from './floyd';
 import { behaviour } from './behaviour';
 import { currencysystem } from './currencysystem';
+import food from './images/feed.png';
+import jobby from './images/poop.png'
 
 const App = () => {
   const [age, setAge] = useState(0);
@@ -19,28 +21,38 @@ const App = () => {
   const currencyFunctions = currencysystem(setCurrency);
 
   return (
-    <div>
+    <div className='GameContainer'>
       <Floyd
         age={age}
-        setAge={setAge}
         poop={poop}
-        setPoop={setPoop}
         health={health}
-        setHealth={setHealth}
         mood={mood}
-        setMood={setMood}
         isAlive={isAlive}
-        setIsAlive={setIsAlive}
         burger={burger}
+        isSleeping={isSleeping}
+        isPlaying={isPlaying}
         imageSource={imageSource}
-        setImageSource={setImageSource}
+        killFloyd={behaviourFunctions.killFloyd}
+        currency={currency}
       />
-      <button onClick={() => behaviourFunctions.feed()}>Feed</button>
-      <button onClick={() => behaviourFunctions.clean()}>Clean</button>
-      <button onClick={() => behaviourFunctions.play()}>Play</button>
-      <button onClick={() => behaviourFunctions.sleep()}>Sleep</button>
-      <button onClick={() => currencyFunctions.earn()}>Earn Currency</button>
-      <button onClick={() => currencyFunctions.spend()}>Spend Currency</button>
+      <button onClick={behaviourFunctions.feedBurger}>
+        <img src={food} alt='feed floyd' />
+      </button>
+      <button onClick={behaviourFunctions.clearPoop}>
+        <img src={jobby} alt='clean up poop' />
+      </button>
+      <button onClick={behaviourFunctions.putToSleep}>
+        Sleep
+      </button>
+      <button onClick={behaviourFunctions.play}>
+        Play
+      </button>
+      <button onClick={() => currencyFunctions.earnDuckBills(10)}>
+        Earn DuckBills
+      </button>
+      <button onClick={() => currencyFunctions.spendDuckBills(10)}>
+        Spend DuckBills
+      </button>
     </div>
   );
 };
