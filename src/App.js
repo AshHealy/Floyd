@@ -114,9 +114,12 @@ const Floyd = () => {
 
 //this renders everything in the browser
 //think it's here that I'm having issues with rendering floyd image?
+ 
+
   return (
+
     <div className='GameContainer'>
-      <h1>Floyd</h1>
+     
       <h2>
         Age: {age} | 
         Health: {health} | 

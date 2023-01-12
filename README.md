@@ -14,6 +14,16 @@ To Do
 - [ ] Read| database of items Floyd can buy
 - [ ] Update| Save Floyd's inventory & stats
 - [ ] Style wallet Container
+- [ ] Create new files, behaviour.js, currencysystem.js, and floyd.js in the same directory as app.js file
+- [ ] In floyd.js, create a new functional component Floyd that will manage state and logic related to floyd, such as age,  health, mood, and isAlive
+- [ ] Move the logic related to feeding and sleeping from the Floyd component to behaviour.js
+- [ ] Move the logic related to currency, earning and spending duckbills to currencysystem.js
+- [ ] Import the Floyd component, behaviour and currencysystem from the newly created files into app.js using the import statement
+- [ ] In app.js, use the imported Floyd component to render the JSX
+- [ ] Use the imported behaviour and currencysystem to call their methods and functions
+- [ ] Use the useEffect hook to check if floyd is alive and starts a timer, timer stops when floyd dies
+- [ ] Test your code to make sure everything is working as expecte
+
 
 
 Doing
@@ -64,9 +74,4 @@ Extensions
 - The buttons should have been Styled Components
 - Logic is chaotic and will bite you in the ass no matter what
 
-## Notes and Questions To Ask Ben & Steve
-
-- Can I refactor my App so that everthing is easier to style
-- How can I save the game? Should I be able to save the game?
-
-I've got a currency system that I want to implement. I think I want to build the shop using JSON objects.
+## Notes and Questions To Ask Jen, Ben, Ally & Steve
