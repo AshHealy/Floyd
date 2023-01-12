@@ -2,50 +2,91 @@ import React, { useState, useEffect } from 'react';
 import alive from './images/floyd-alive.gif';
 import dead from './images/floyd-dead.gif';
 
-export const Floyd = () => {
-  const [age, setAge] = useState(0);
-  const [poop, setPoop] = useState(0);
-  const [health, setHealth] = useState(100);
-  const [mood, setMood] = useState(100);
-  const [isAlive, setIsAlive] = useState(true);
-  const [burger, setBurger] = useState(0);
-  const [isSleeping, setIsSleeping] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [imageSource, setImageSource] = useState(alive);
+class Floyd extends React.Component {
+  state = {
+    age: 0,
+    poop: 0,
+    health: 100,
+    mood: 100,
+    isAlive: true,
+    burger: 0,
+    isSleeping: false,
+    isPlaying: false,
+    imageSource: alive,
+    currency: 0
+  }
 
-  useEffect(() => {
-    let timer = setInterval(() => {
-      if (isAlive) {
-        setAge(age + 1);
-        setHealth(health - 1);
-        setMood(mood - 1);
-        if (mood <= 0 || health <= 0 || age > 100) {
-          setIsAlive(false);
-          setImageSource(dead);
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      if (this.state.isAlive) {
+        this.setState({
+          age: this.state.age + 1,
+          health: this.state.health - 1,
+          mood: this.state.mood - 1
+        });
+        if (this.state.mood <= 0 || this.state.health <= 0 || this.state.age > 100) {
+          this.setState({
+            isAlive: false,
+            imageSource: dead
+          });
         }
       }
     }, 1000);
-    return () => {
-      if (isAlive) {
-        clearInterval(timer);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  static feedBurger() {
+    this.setState({
+      burger: this.state.burger + 1,
+      poop: this.state.poop + 1,
+      health: this.state.health + 5,
+      mood: this.state.mood + 5
+    });
+  }
+
+  static putToSleep() {
+    this.setState({
+      isSleeping: true,
+      health: this.state.health + 10
+    });
+    if (this.state.isPlaying) {
+      this.stopPlaying();
+    } else if (this.state.isSleeping) {
+      this.wakeUp();
+    } else {
+      this.play();
+    }
+  }
+
+  static wakeUp() {
+    this.setState({
+    isSleeping: false
+    });
+    }
+    
+
+
+
+      render() {
+        const { age, poop, health, mood, isAlive, burger, isSleeping, isPlaying, imageSource, currency } = this.state;
+        return (
+          <div className="FloydContainer">
+            <img src={imageSource} alt="floyd" />
+            <p>Age: {age}</p>
+            <p>Poop: {poop}</p>
+            <p>Health: {health}</p>
+            <p>Mood: {mood}</p>
+            <p>Burger: {burger}</p>
+            <p>Is Sleeping: {isSleeping ? "Yes" : "No"}</p>
+            <p>Is Playing: {isPlaying ? "Yes" : "No"}</p>
+            <p>Currency: {currency} DuckBills</p>
+          </div>
+        );
       }
     }
-  }, [age, poop, health, mood, isAlive]);
-
-  const killFloyd = () => {
-    setIsAlive(false);
-    setImageSource(dead);
-  };
-
-  return (
-    <div className='floyd'>
-      <img src={imageSource} alt='Floyd' />
-      <div>Age: {age}</div>
-      <div>Poop: {poop}</div>
-      <div>Health: {health}</div>
-      <div>Mood: {mood}</div>
-      <div>Burger: {burger}</div>
-      <button onClick={killFloyd}>Kill Floyd</button>
-    </div>
-  );
-};
+    
+    export default Floyd;
+    
