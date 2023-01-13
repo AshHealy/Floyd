@@ -66,6 +66,12 @@ class Floyd extends React.Component {
     isSleeping: false
     });
     }
+
+  static play() {
+    this.setState({
+      
+    })
+  }
     
 
 

@@ -1,3 +1,6 @@
+//get rid of this file, don't really need it. Put all of Floyd's behaviours in the floyd.js file. This was a dumb idea and 100% why the buttons don't work. U fool
+
+
 import { useState } from 'react';
 
 export const behaviour = (setBurger, setPoop, setHealth, setMood) => {
