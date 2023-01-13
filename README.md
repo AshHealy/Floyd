@@ -13,31 +13,30 @@ To Do
 - [ ] Add shops
 - [ ] Read| database of items Floyd can buy
 - [ ] Update| Save Floyd's inventory & stats
-- [ ] Style wallet Container
-- [X] Create new files, behaviour.js, currencysystem.js, and floyd.js in the same directory as app.js file
-- [X] In floyd.js, create a new functional component Floyd that will manage state and logic related to floyd, such as age,  health, mood, and isAlive
-- [X] Move the logic related to feeding and sleeping from the Floyd component to behaviour.js <!-- Why on earth did I think this would work-->
-- [ ] Move the logic related to currency, earning and spending duckbills to currencysystem.js <!-- This good tho-->
-- [ ] Import the Floyd component, behaviour and currencysystem from the newly created files into app.js using the import statement
-- [ ] In app.js, use the imported Floyd component to render the JSX
-- [ ] Use the imported behaviour and currencysystem to call their methods and functions
-- [ ] Use the useEffect hook to check if floyd is alive and starts a timer, timer stops when floyd dies
-- [ ] Test code to make sure everything is working as expected
 
 
 
 Doing
 - [ ] Adjust sizes of dead and alive sprites
 - [ ] Implement Floyds Room
-- [ ] Prevent Sleep-playing <!-- kind of got this working? --> 
+- [ ] Render Wallet Container
+- [ ] Style Wallet Container
+
 
 
 
 Done
+- [X] Use the useEffect hook to check if floyd is alive and starts a timer, timer stops when floyd dies
+- [X] Import the Floyd component, behaviour and currencysystem from the newly created files into app.js using the import statement
+- [X] Move the logic related to currency, earning and spending duckbills to currencysystem.js <!-- This good tho-->
+- [X] Move the logic related to feeding and sleeping from the Floyd component to behaviour.js <!-- Why on earth did I think this would work-->
+- [X] Prevent Sleep-playing <!-- kind of got this working? --> 
 - [X] Style Buttons
 - [X] Style Game Container
 - [X] Add floyd alive and floyd dead images
 - [X] Add currency system
+- [X] Create new files, behaviour.js, currencysystem.js, and floyd.js in the same directory as app.js file
+- [X] In floyd.js, create a new functional component Floyd that will manage state and logic related to floyd, such as age,  health, mood, and isAlive
 
 
 Mvp
@@ -66,7 +65,7 @@ Extensions
 - [ ] Pink Floyd Easter Egg
 
 
-## What Have I Learned So Far
+## What Have I Learned So Far For Next Time
 
 - Create the timer & Kill Buttons First
 - Then Implement Behaviours
