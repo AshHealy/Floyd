@@ -75,3 +75,10 @@ Extensions
 
 ## Notes and Questions To Ask Jen, Ben, Ally & Steve
 - Will I ever understand hooks or am I forever screwed?
+
+
+## Use Later
+<img src={jobby} alt="poop" /> 
+<img src={food} alt="burger" />
+import food from './images/feed.png';
+import jobby from './images/poop.png'

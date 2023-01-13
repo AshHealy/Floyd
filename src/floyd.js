@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import alive from './images/floyd-alive.gif';
 import dead from './images/floyd-dead.gif';
-import food from './images/feed.png';
-import jobby from './images/poop.png'
+
 
 const Floyd = () => {
   const [age, setAge] = useState(0);
@@ -88,25 +87,29 @@ const Floyd = () => {
 return (
   <div className="GameContainer">
     <img src={imageSource} alt="floyd" />
-    <p>Age: {age}</p>
-    <p>Poop: {poop}</p>
-    <p>Health: {health}</p>
-    <p>Mood: {mood}</p>
-    <p>Burger: {burger}</p>
-    <p>Is Sleeping: {isSleeping ? "Yes" : "No"}</p>
-    <p>Is Playing: {isPlaying ? "Yes" : "No"}</p>
-    <button onClick={feedBurger} disabled={!isAlive}>
-      <img src={food} alt="feed floyd" />
-    </button>
-    <button onClick={clearPoop} disabled={!isAlive}>
-      <img src={jobby} alt="clean up poop" />
-    </button>
+    <h2 className='FloydStats'>
+      <p>Age: {age}</p>
+      <p>Poop: {poop}</p>
+      <p>Health: {health}</p>
+      <p>Mood: {mood}</p>
+      <p>Burger: {burger}</p>
+      <p>Is Sleeping: {isSleeping ? "Yes" : "No"}</p>
+      <p>Is Playing: {isPlaying ? "Yes" : "No"}</p>
+    </h2>
+  <div className='ButtonContainer'>
+    <button onClick={feedBurger} disabled={!isAlive}>Feed</button>
+    <button onClick={clearPoop} disabled={!isAlive}>Clean</button>
     <button onClick={putToSleep} disabled={!isAlive} >Sleep</button>
     <button onClick={wakeUp} disabled={!isSleeping + !isAlive}>Wake Up</button>
     <button onClick={play} disabled={!isAlive} >Play</button>
     <button onClick={stopPlaying} disabled={!isPlaying + !isAlive}>Stop Playing</button>
-    <button onClick={killFloyd}>Kill Floyd</button>
-    {!isAlive && <button onClick={resetFloyd}>Reset</button>}
+  </div>
+
+  <div className='DevTools'>
+  <button  id='kill' onClick={killFloyd}>Kill Floyd</button>
+    {!isAlive && <button id='reset' onClick={resetFloyd}>Reset</button>}
+  </div>
+
   </div>
 );
 };
