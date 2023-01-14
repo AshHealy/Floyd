@@ -73,7 +73,7 @@ Extensions
 - The buttons should have been Styled Components
 - Logic is chaotic and will bite you in the ass no matter what
 
-## Notes and Questions To Ask Jen, Ben, Ally & Steve
+## Notes and Questions
 - Will I ever understand hooks or am I forever screwed?
 
 
