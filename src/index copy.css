@@ -11,30 +11,32 @@ body {
 
 img {
   display: block;
-  transform: scale(1.5);
   margin-left: auto;
   margin-right: auto;
   padding: 5rem;
 }
 
-.GameContainer {
-  background: #deecf2;
-  height: 500px;
-  width: 800px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .FloydStats{
   display: flex;
-  justify-content: space-evenly;
   flex-direction: row;
   text-align: center;
   font-size: 16px;
   align-items: center;
 }
+
+.ButtonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row; 
+  background: #20d4c5;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
 
 #kill{
   background: #9b0909;
@@ -57,26 +59,7 @@ img {
 }
 
 .DevTools{
-  align-items: center;
-}
-
-
-.wallet-container{
-  background: #deecf2;
-  height: 50px;
-  width: 200px;
-  position: absolute;
-  right: 0; /* move the container to the right side of the screen */
-  align-items: right;
-}
-
-#wallet-buttons{
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  text-align: center;
-  font-size: 16px;
-  align-items: center;
 }
 
 .earn{
@@ -97,4 +80,26 @@ img {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+
+
+.GameContainer {
+  background: #deecf2;
+  height: 500px;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wallet-container{
+  background: #deecf2;
+  height: 50px;
+  width: 80px;
+  display: flex;
+  position: relative;
+  margin-left: -100px; /* move the container 100px to the left of its parent container */
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
