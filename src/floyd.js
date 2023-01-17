@@ -67,8 +67,8 @@ const Floyd = () => {
 
   const play = () => {
     if(!isSleeping) {
-      setIsPlaying(true);
       setMood(mood + 10);
+      setIsPlaying(true);
     }
   };
 
