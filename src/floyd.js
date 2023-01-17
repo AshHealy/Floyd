@@ -33,6 +33,7 @@ const Floyd = () => {
     }
   }, [age, health, mood, isAlive]);
 
+
   const resetFloyd = () => {
     setAge(0);
     setPoop(0);
@@ -75,6 +76,7 @@ const Floyd = () => {
   const stopPlaying = () => {
     setIsPlaying(false);
   };
+
 
   const clearPoop = () => {
     setPoop(0);
