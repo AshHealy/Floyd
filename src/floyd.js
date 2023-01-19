@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import alive from './images/floyd-alive.gif';
 import dead from './images/floyd-dead.gif';
+import heart from './images/heartbeat.gif'
 
 
 const Floyd = () => {
@@ -92,7 +93,7 @@ return (
     <h2 className='FloydStats'>
       <p>Age: {age}</p>
       <p>Poop: {poop}</p>
-      <p>Health: {health}</p>
+      <p> <img src={heart} alt="heart" />  {health}</p>
       <p>Mood: {mood}</p>
       <p>Burger: {burger}</p>
       <p>Is Sleeping: {isSleeping ? "Yes" : "No"}</p>
