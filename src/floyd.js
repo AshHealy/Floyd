@@ -8,12 +8,14 @@ const Floyd = () => {
   const [age, setAge] = useState(0);
   const [poop, setPoop] = useState(0);
   const [health, setHealth] = useState(100);
+  const  maxHealth = 100;
   const [mood, setMood] = useState(100);
   const [isAlive, setIsAlive] = useState(true);
   const [burger, setBurger] = useState(0);
   const [isSleeping, setIsSleeping] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [imageSource, setImageSource] = useState(alive);
+  
 
   useEffect(() => {
     let timer = setInterval(() => {
@@ -47,21 +49,26 @@ const Floyd = () => {
     setImageSource(alive);
   };
 
-  const feedBurger = () => {
-    setBurger(burger + 1);
-    setHealth(health + 5);
-    setMood(mood + 5);
-    setTimeout(() => {
-      setPoop(poop + 1);
+const feedBurger = () => {
+    const timeout = setTimeout(() => {
+        setPoop(poop => poop + 1);
+        clearTimeout(timeout);
     }, 5000);
-  };
+    setBurger(burger => burger + 1);
+    setHealth(health => health + 5);
+    setMood(mood => mood + 5);
+};
 
-  const putToSleep = () => {
-    if(!isPlaying) {
-      setIsSleeping(true);
-      setHealth(health + 10);
-    }
-  };
+
+ const putToSleep = () => {
+     if (!isPlaying && typeof health === 'number' && typeof isSleeping === 'boolean' ) {
+         if(!isSleeping) {
+           setIsSleeping(true);
+           setHealth(Math.min(health + 10, maxHealth));
+         }
+     }
+   };
+ 
 
   const wakeUp = () => {
     setIsSleeping(false);
