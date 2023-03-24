@@ -15,7 +15,7 @@ To Do
 - [ ] Update| Save Floyd's inventory & stats
 
 
-### Shop To-Do List
+Shop To-Do List
 - [ ] Create a new component for the shop, and add it to your src folder.
 - [ ] Create a state variable in the main App component to track whether the shop is open or closed.
 - [ ] Add a button to the main App component that, when clicked, toggles the state of the shop open/closed variable.
