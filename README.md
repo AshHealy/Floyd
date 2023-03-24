@@ -15,6 +15,19 @@ To Do
 - [ ] Update| Save Floyd's inventory & stats
 
 
+### Shop To-Do List
+- [ ] Create a new component for the shop, and add it to your src folder.
+- [ ] Create a state variable in the main App component to track whether the shop is open or closed.
+- [ ] Add a button to the main App component that, when clicked, toggles the state of the shop open/closed variable.
+- [ ] Pass the open/closed variable as a prop to the Shop component.
+- [ ] Create the UI for the Shop component, including a header and a stock display.
+- [ ] Create an array of items that will be available for purchase in the shop, and add it to the Shop component state.
+- [ ] Map over the items array and render each item in the stock display.
+- [ ] Add a "Buy" button to each item in the stock display.
+- [ ] Add an onClick function to the Buy button that decrements the currency and adds the item to the player's inventory.
+- [ ] Display the player's inventory in the main App component.
+
+
 
 Doing
 - [ ] Adjust sizes of dead and alive sprites
@@ -77,10 +90,6 @@ Extensions
 - Will I ever understand hooks or am I forever screwed?
 
 
-## Use Later
-<img src={jobby} alt="poop" /> 
-<img src={food} alt="burger" />
-import food from './images/feed.png';
-import jobby from './images/poop.png'
+
 
 
